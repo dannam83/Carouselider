@@ -1,0 +1,36 @@
+.Toggle-display-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Toggle-display-div {
+  width: 81vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Toggle-display-label {
+  color: rgba(0,0,131);
+  font-size: 11px;
+}
+
+@media screen and (max-width:1100px) {
+  .Toggle-display-div {
+    width: 890px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .Toggle-display-container {
+    margin-top: 10px;
+  }
+  .Toggle-display-div {
+    width: 81vw;
+  }
+  .Toggle-display-label {
+    font-size: 8px;
+  }
+}

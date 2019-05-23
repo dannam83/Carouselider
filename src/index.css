@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: 'BentonSansBook';
+  src: local('BentonSansBook'), url(./assets/fonts/BentonSansBook.otf) format('otf');
+}
+@font-face {
+  font-family: 'BentonSansCompressedBlack';
+  src: local('BentonSansCompressedBlack'), url(./assets/fonts/BentonSansCompressedBlack.otf) format('otf');
+}
+@font-face {
+  font-family: 'BentonSansRegular';
+  src: local('BentonSansRegular'), url(./assets/fonts/BentonSansRegular.otf) format('otf');
+}
+@font-face {
+  font-family: 'BentonSansWide';
+  src: local('BentonSansWide'), url(./assets/fonts/BentonSansWide.otf) format('otf');
+}
+@font-face {
+  font-family: 'BentonSansWideBlack';
+  src: local('BentonSansWideBlack'), url(./assets/fonts/BentonSansWideBlack.otf) format('otf');
+}

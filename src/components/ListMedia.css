@@ -1,0 +1,52 @@
+.List-media-div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 15px;
+}
+
+.List-media-image {
+  width: 200px;
+}
+
+.List-labels-div {
+  width: 200px;
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.List-label-show {
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+
+.List-label-name {
+  font-size: 14px;
+}
+
+@media screen and (max-width:500px) {
+  .List-media-div {
+    padding-bottom: 8px;
+  }
+
+  .List-media-image {
+    width: 100px;
+  }
+
+  .List-labels-div {
+    width: 100px;
+    padding-left: 3px;
+  }
+
+  .List-label-show {
+    font-size: 7px;
+    padding-bottom: 2px;
+  }
+
+  .List-label-name {
+    font-size: 9px;
+  }
+}
