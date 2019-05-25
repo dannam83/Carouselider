@@ -30,7 +30,7 @@ class SearchBar extends Component {
             placeholder='Search "Walmart"'
             onChange={this.onChangeText}
           />
-        <img src="/images/iconSearch.svg" className="Search-bar-icon" alt="logo" />
+        <img src="images/iconSearch.svg" className="Search-bar-icon" alt="logo" />
         </div>
       </div>
     )

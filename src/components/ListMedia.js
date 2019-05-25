@@ -4,7 +4,7 @@ import './ListMedia.css';
 
 const ListMedia = ({ media }) => {
   const { name, show, backgroundImage } = media;
-  const imgSource = `/images/${backgroundImage}`;
+  const imgSource = `images/${backgroundImage}`;
 
   return (
     <div className="List-media-div">

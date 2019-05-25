@@ -4,7 +4,7 @@ import './SliderMedia.css';
 
 const SliderMedia = ({ media }) => {
   const { name, show, backgroundImage } = media;
-  const imgSource = `/images/${backgroundImage}`;
+  const imgSource = `images/${backgroundImage}`;
 
   return (
     <div className="Slider-media-div">
