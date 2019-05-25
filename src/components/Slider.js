@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'nuka-carousel';
 
 import SliderMedia from './SliderMedia';
-import './Slider.css';
+import './css/Slider.css';
 
 const Slider = ({ media, windowWidth }) => {
   const slidesToShow = windowWidth > 500 ? 4 : 1;

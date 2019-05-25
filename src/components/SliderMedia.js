@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './SliderMedia.css';
+import './css/SliderMedia.css';
 
 const SliderMedia = ({ media }) => {
   const { name, show, backgroundImage } = media;

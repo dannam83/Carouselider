@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ListMedia.css';
+import './css/ListMedia.css';
 
 const ListMedia = ({ media }) => {
   const { name, show, backgroundImage } = media;

@@ -5,7 +5,7 @@ import windowSize from 'react-window-size';
 import { fetchMedia } from '../actions';
 import Slider from './Slider';
 import List from './List';
-import './Display.css';
+import './css/Display.css';
 
 class Display extends Component {
   componentDidMount() {

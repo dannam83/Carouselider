@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import iconSearch from '../assets/images/iconSearch.svg';
 import { fetchMedia, searchMedia } from '../actions';
-import './SearchBar.css';
+import './css/SearchBar.css';
 
 class SearchBar extends Component {
   state = { search: "" }
@@ -31,7 +30,7 @@ class SearchBar extends Component {
             placeholder='Search "Walmart"'
             onChange={this.onChangeText}
           />
-          <img src={iconSearch} className="Search-bar-icon" alt="logo" />
+        <img src="/images/iconSearch.svg" className="Search-bar-icon" alt="logo" />
         </div>
       </div>
     )

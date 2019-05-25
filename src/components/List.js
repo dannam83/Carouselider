@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ListMedia from './ListMedia';
-import './List.css';
+import './css/List.css';
 
 const List = ({ media }) => {
   return (

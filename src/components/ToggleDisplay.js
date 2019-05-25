@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import windowSize from 'react-window-size';
 
-import './ToggleDisplay.css';
 import { displaySelect } from '../actions';
+import './css/ToggleDisplay.css';
 
 class ToggleDisplay extends Component {
   onClick(label) {
