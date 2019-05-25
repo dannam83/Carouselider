@@ -6,7 +6,7 @@ import './List.css';
 const List = ({ media }) => {
   return (
     <div className="List-div">
-      <label className="List-headline">Headline</label>
+      <label className="List-headline">Recent Articles</label>
       { media.map((m) => <ListMedia media={m} key={m.id}/>) }
     </div>
   )

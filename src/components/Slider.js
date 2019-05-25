@@ -10,7 +10,7 @@ const Slider = ({ media, windowWidth }) => {
   return (
     <div className="Slider-div">
       <div className="Slider-headline-div">
-        <label className="Slider-headline">Headline</label>
+        <label className="Slider-headline">Recent Articles</label>
       </div>
       <Carousel
         wrapAround={true}
