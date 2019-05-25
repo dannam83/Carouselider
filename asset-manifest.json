@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Carouselider/static/css/main.569a72d0.chunk.css",
-    "main.js": "/Carouselider/static/js/main.71877fe9.chunk.js",
-    "main.js.map": "/Carouselider/static/js/main.71877fe9.chunk.js.map",
-    "runtime~main.js": "/Carouselider/static/js/runtime~main.e77fe861.js",
-    "runtime~main.js.map": "/Carouselider/static/js/runtime~main.e77fe861.js.map",
-    "static/js/2.0f1a52be.chunk.js": "/Carouselider/static/js/2.0f1a52be.chunk.js",
-    "static/js/2.0f1a52be.chunk.js.map": "/Carouselider/static/js/2.0f1a52be.chunk.js.map",
-    "index.html": "/Carouselider/index.html",
-    "precache-manifest.b780a9f0f9bf162deedf3541b5639e15.js": "/Carouselider/precache-manifest.b780a9f0f9bf162deedf3541b5639e15.js",
-    "service-worker.js": "/Carouselider/service-worker.js",
-    "static/css/main.569a72d0.chunk.css.map": "/Carouselider/static/css/main.569a72d0.chunk.css.map",
-    "static/media/index.css": "/Carouselider/static/media/BentonSansWideBlack.aa1853e4.otf"
+    "main.css": "/carouselider/static/css/main.9973a351.chunk.css",
+    "main.js": "/carouselider/static/js/main.f51fc287.chunk.js",
+    "main.js.map": "/carouselider/static/js/main.f51fc287.chunk.js.map",
+    "runtime~main.js": "/carouselider/static/js/runtime~main.fd513de1.js",
+    "runtime~main.js.map": "/carouselider/static/js/runtime~main.fd513de1.js.map",
+    "static/js/2.b3638f88.chunk.js": "/carouselider/static/js/2.b3638f88.chunk.js",
+    "static/js/2.b3638f88.chunk.js.map": "/carouselider/static/js/2.b3638f88.chunk.js.map",
+    "index.html": "/carouselider/index.html",
+    "precache-manifest.2b14c8dfa97443b51a4549c319483912.js": "/carouselider/precache-manifest.2b14c8dfa97443b51a4549c319483912.js",
+    "service-worker.js": "/carouselider/service-worker.js",
+    "static/css/main.9973a351.chunk.css.map": "/carouselider/static/css/main.9973a351.chunk.css.map",
+    "static/media/index.css": "/carouselider/static/media/BentonSansWideBlack.aa1853e4.otf"
   }
 }
