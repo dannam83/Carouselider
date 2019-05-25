@@ -1,0 +1,48 @@
+.Slider-media-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Slider-media-image {
+  width: 200px;
+}
+
+.Slider-labels-div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 6px;
+}
+
+.Slider-label-show {
+  font-size: 11px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.Slider-label-name {
+  font-size: 14px;
+}
+
+@media screen and (max-width:500px) {
+  .Slider-media-image {
+    width: 100px;
+  }
+
+  .Slider-labels-div {
+    width: 100px;
+    padding-left: 3px;
+  }
+
+  .Slider-label-show {
+    font-size: 7px;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+  }
+
+  .Slider-label-name {
+    font-size: 9px;
+  }
+}
