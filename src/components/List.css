@@ -1,0 +1,17 @@
+.List-div {
+  display: flex;
+  flex-direction: column;;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.List-headline {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width:500px) {
+  .List-headline {
+    padding-bottom: 10px;
+    font-size: 10px;
+  }
+}
