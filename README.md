@@ -1,69 +1,107 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Carouselider
+[Live Site](https://dannam.xyz/Carouselider/)
 
-## Available Scripts
+## Summary
+Carouselider demonstrates use of an infinite carousel slider for viewing media, dynamic css styling built to accommodate browser windows on mobile, a search bar to filter articles, and a display toggle to select your view.
 
-To get started, run two commands:
+## Infinite Carousel Slider
+This application uses the nuka-carousel component. Nuka-carousel is responsive and is touch friendly, so it works well on mobile browsers. There is a vertical options as well, but for this application we only used it for the horizontal option. Reason being that horizontally we would want to limit ourselves to what can fit on the screen at once, but vertically it would be natural and intuitive that the list continues down past what's immediately visible on the screen.
 
-### `npm install`
-### `npm start`
+I created a SliderMedia component to stylize each element of the carousel and then mapped through the media data held in our state. Nuka-carousel will take all it's child elements and use them in the carousel. You can turn the infinite looping on or off as you choose. For Carouselider, inifinite looping is on.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+const SliderMedia = ({ media }) => {
+  const { name, show, backgroundImage } = media;
+  const imgSource = `images/${backgroundImage}`;
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+  return (
+    <div className="Slider-media-div">
+      <img src={imgSource} className="Slider-media-image" alt="media" />
+      <div className="Slider-labels-div">
+        <label className="Slider-label-show">{show}</label>
+        <label className="Slider-label-name">{name}</label>
+      </div>
+    </div>
+  )
+}
 
-### `npm test`
+const Slider = ({ media, windowWidth }) => {
+  const slidesToShow = windowWidth > 500 ? 4 : 1;
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  return (
+    <div className="Slider-div">
+      <div className="Slider-headline-div">
+        <label className="Slider-headline">Recent Articles</label>
+      </div>
+      <Carousel
+        wrapAround={true}
+        slidesToShow={slidesToShow}
+        framePadding="20px"
+        cellSpacing={30}
+        renderBottomCenterControls={() => false}
+        width="85%"
+      >
 
-### `npm run build`
+        { media.map((m) => <SliderMedia media={m} key={m.id}/>) }
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      </Carousel>
+    </div>
+  )
+}
+```
+## Dynamic Styling
+You might have noticed that the slider component starts with a variable that tells it how many slides to show. This is part of creating dynamic styling. One of the props passed into the component is the width of the window. Bring the width of your browser to at least 500px, and you'll see the carousel change from having four slides at once to just showing one slide at a time, as you would expect to see on a mobile device.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Additionally, CSS using @media is controlling the rest of the styling for when the browser screen gets as small as 500px.
+```
+@media screen and (max-width:500px) {
+  .App {
+    width: auto;
+  }
+  .App-logo {
+    height: 20px;
+    padding-top: 20px;
+  }
+  .App-header {
+    height: 100px;
+  }
+  .Slider-container {
+    margin-top: 25px;
+  }
+  .List-container {
+    margin-top: 25px;
+  }
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Search Bar
+The search bar will re-query the data on every onChangeText. With every key stroke you'll see the media content change. Additionally, there is a distinct query that is made to simply retrieve all the media both when componentDidMount and if the value of the search bar is ever changed to an empty string.
 
-### `npm run eject`
+## Toggle Display
+The display will get from state what the selected display is. Clicking on the display choice will simply fire an action that updates our state to the selected display. Based on the choice that comes in from state, either the Slider (horizontal) display component will be returned, or the List (vertical) component will be returned. The default state is set to Slider.
+```
+class Display extends Component {
+  componentDidMount() {
+    this.props.fetchMedia();
+  }
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  render() {
+    const { media, windowWidth } = this.props;
+    return (
+      <div>
+        {
+          this.props.display === 'Slider' ?
+          <div className="Slider-container">
+            <Slider media={media} windowWidth={windowWidth} />
+          </div>
+          :
+          <div className="List-container">
+            <List media={this.props.media} />
+          </div>
+        }
+      </div>
+    );
+  }
+}
+```
+### Thanks for stopping by and checking out my work!
