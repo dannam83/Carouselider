@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Carouselider/static/css/main.569a72d0.chunk.css",
-    "main.js": "/Carouselider/static/js/main.312fa3b0.chunk.js",
-    "main.js.map": "/Carouselider/static/js/main.312fa3b0.chunk.js.map",
+    "main.css": "/Carouselider/static/css/main.f8257ac6.chunk.css",
+    "main.js": "/Carouselider/static/js/main.66ce9e59.chunk.js",
+    "main.js.map": "/Carouselider/static/js/main.66ce9e59.chunk.js.map",
     "runtime~main.js": "/Carouselider/static/js/runtime~main.e77fe861.js",
     "runtime~main.js.map": "/Carouselider/static/js/runtime~main.e77fe861.js.map",
     "static/js/2.b3638f88.chunk.js": "/Carouselider/static/js/2.b3638f88.chunk.js",
     "static/js/2.b3638f88.chunk.js.map": "/Carouselider/static/js/2.b3638f88.chunk.js.map",
     "index.html": "/Carouselider/index.html",
-    "precache-manifest.a1d9ad6d059f39966e6eb12bd34212fc.js": "/Carouselider/precache-manifest.a1d9ad6d059f39966e6eb12bd34212fc.js",
+    "precache-manifest.8a80ebc7eba411b52b37656fd922a6e5.js": "/Carouselider/precache-manifest.8a80ebc7eba411b52b37656fd922a6e5.js",
     "service-worker.js": "/Carouselider/service-worker.js",
-    "static/css/main.569a72d0.chunk.css.map": "/Carouselider/static/css/main.569a72d0.chunk.css.map",
+    "static/css/main.f8257ac6.chunk.css.map": "/Carouselider/static/css/main.f8257ac6.chunk.css.map",
     "static/media/index.css": "/Carouselider/static/media/BentonSansWideBlack.aa1853e4.otf"
   }
 }
