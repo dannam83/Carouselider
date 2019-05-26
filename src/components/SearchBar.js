@@ -13,10 +13,6 @@ class SearchBar extends Component {
     this.props.searchMedia(value);
   }
 
-  submitSearch = (event) => {
-    this.props.searchMedia(this.state.search);
-  }
-
   render() {
     return (
       <div className="Search-bar-container">
